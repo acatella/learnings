@@ -1,0 +1,7 @@
+0.  longest english word
+1.  gets amount of resources used
+2.  16
+3.  so no copies are made and altered
+4.  using fgetc(), the loop goes through the byte stream char by char until it hits the end of the file
+5.  it would be possible to get strings with non alpha chars
+6.  because those words should not be altered
