@@ -1,0 +1,12 @@
+1.  A library that contains definitions for new types of integers
+2.  To define data structures for elements that are the same number of bytes in size
+3.  1, 4, 4, 2
+4.  0x42 0x4D
+5.  bfSize includes the size of the header. biSize does not
+6.  It indicates a top down DIP
+7.  biBitCount
+8.  The file may not exist or you may not have access to it
+9.  Because we only want to read one element of the passed data type at a time
+10. 3
+11. Lets you move through a file
+12. Current position in a file
