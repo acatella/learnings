@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Let's learn something.</h1>
+<div class="jumbotron">
+<form action="{{ url_for('search') }}" class="form-inline" method="post">
+    <div class="form-group">
+      <span class="prompt">How do people in <input class="form-control" name="location" type="text"/>
+      feel about <input class="form-control" name="keyword" type="text"/> right now?
+      </span>
+  </div>
+  <button class="search-btn btn btn-default" type="submit">Search</button>
+</form>
+</div>
+<div class="error-message">{{ error_message }}</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="row">
+  <div class="col-sm-9">
+    <h1>Interesting.</h1>    
+  </div>
+  <div class="col-sm-3 nav">
+    <div class="app-buttons">
+      <a href="{{ url_for('learnings')  }}">Past learnings ></a><br>
+      <a href="{{ url_for('index') }}">Learn something new ></a>
+    </div>    
+  </div>
+</div>
+<div class="jumbotron">
+<span class="prompt result">{{ message }}</span>
+</div>
+
+  
+<div class="row meta-info">
+  {% if chart == "" %}
+  
+  {% elif fav_tweet == "" %}
+  <div class="col-sm-12 chart">
+    <h4>Breakdown</h4>
+    {{ chart | safe }}
+  </div>
+  {% else %}
+  <div class="col-sm-8 chart">
+    <h4>Breakdown</h4>
+    {{ chart | safe }}
+  </div>
+  <div class="col-sm-4 chart">
+    <h4>Most Favorited</h4>
+    <p class="tweet-text">
+      {{ fav_tweet.fav_text}}
+    </p>
+    <p class="tweet-meta-info author">
+      {{ fav_tweet.fav_author }}
+    </p>
+    <p class="tweet-meta-info">
+      Favorited {{ fav_tweet.fav_count }} times
+    </p>
+  </div>    
+  
+  {% endif %}
+</div>
+
+{% endblock %}
