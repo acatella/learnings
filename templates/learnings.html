@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>{{ headline }}</h1>
+<div class="app-buttons return">
+    <a href="{{ url_for('index') }}">Learn something new ></a>
+</div>
+<ul class="learnings-list list-group">
+    {% for learning in learnings %}
+    <li class="learning list-group-item {{ learning.sentiment }}">On {{ learning.date }}, {{ learning.past_message }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
